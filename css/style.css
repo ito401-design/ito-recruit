@@ -1381,7 +1381,3 @@ pre {white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;}
 
 	}/*追加指定ここまで*/
 
-/* 「アイティーオーについて」の見出しサイズ */
-.box1 h2 .main-text {
-	font-size: 2.0rem;
-}
