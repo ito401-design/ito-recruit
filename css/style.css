@@ -921,7 +921,7 @@ footer h4 {
 
 	/*ボックスの左上イラスト（1つ目）*/
 	.box1 .illust1 {
-		rignt: auto;
+		right: auto;
 		left: 3vw;		/*左からの配置場所*/
 		top: -4vw;		/*上からの配置場所。マイナスがついているので本来の向きとは逆に移動します。*/
 		width: 8vw;		/*イラストの幅。*/
@@ -929,7 +929,7 @@ footer h4 {
 
 	/*ボックスの左上イラスト（2つ目）*/
 	.box1 .illust2 {
-		rignt: auto;
+		right: auto;
 		left: 14vw;		/*左からの配置場所*/
 		top: -8vw;		/*上からの配置場所。マイナスがついているので本来の向きとは逆に移動します。*/
 		width: 5vw;		/*イラストの幅。*/
@@ -1136,7 +1136,7 @@ footer h4 {
 
 /*縦書きにする指定*/
 .title-bg h2 .tate {
-	/*writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
 	text-orientation: upright;
 	font-size: 2rem;
 }
