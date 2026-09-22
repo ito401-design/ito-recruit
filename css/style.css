@@ -1136,8 +1136,8 @@ footer h4 {
 
 /*縦書きにする指定*/
 .title-bg h2 .tate {
-	writing-mode: vertical-rl;
-	text-orientation: upright;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
 	font-size: 2rem;
 }
 
