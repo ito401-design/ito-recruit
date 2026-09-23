@@ -977,7 +977,7 @@ footer h4 {
 ---------------------------------------------------------------------------*/
 /*冒頭の大きなロゴの飾り*/
 .logo-kazari {
-	background: url("../images/logo_kazari.svg") no-repeat left top / 70%;	/*ロゴ画像の読み込み。左上に配置し、幅は70%。*/
+	background: url("../images/ito_logo_kazari.png") no-repeat left top / 70%;	/*ロゴ画像の読み込み。左上に配置し、幅は70%。*/
 }
 
 /*１枚目の写真*/
