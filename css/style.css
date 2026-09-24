@@ -982,12 +982,12 @@ footer h4 {
 
 /*１枚目の写真*/
 .list1.image1 {
-	background: url("../images/1.jpg") no-repeat center center / cover;
+	background: url("../images/about_us.jpg") no-repeat center center / cover;
 }
 
 /*２枚目の写真*/
 .list1.image2 {
-	background: url("../images/2.jpg") no-repeat center center / cover;
+	background: url("../images/trn_program.jpg") no-repeat center center / cover;
 }
 
 /*３枚目の写真*/
