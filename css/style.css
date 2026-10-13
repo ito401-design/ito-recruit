@@ -997,7 +997,7 @@ footer h4 {
 
 /*４枚目の写真*/
 .list1.image4 {
-	background: url("../about_us.jpg") no-repeat center center / cover;
+	background: url("../images/about_us.jpg") no-repeat center center / cover;
 }
 
 /*ボックス１個あたり*/
