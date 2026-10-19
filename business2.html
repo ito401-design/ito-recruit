@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>キャリアパス｜株式会社アイティーオー採用サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="キャリアに、可能性を。株式会社アイティーオーで描けるキャリアパスと、アメリカで働く選択肢をご紹介します。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* SPECIALページ専用スタイル。既存のstyle.cssは変更しません。 */
+/* 既存CSSのsection共通余白・main見出し設定が重複しないよう、このページ内だけリセット */
+main.special-page {
+  padding: 0;
+}
+.special-page > section {
+  padding: 0;
+}
+.special-page h2 {
+  display: block;
+  align-items: initial;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+.special-page {
+  color: #333;
+  overflow: hidden;
+}
+.special-page .special-hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  background: #f2f2f0;
+  overflow: hidden;
+}
+.special-page .special-hero::after {
+  content: "SPECIAL";
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.28em;
+  font-size: clamp(6rem, 19vw, 19rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: rgba(51, 51, 51, 0.055);
+  pointer-events: none;
+}
+.special-page .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+.special-page .eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+.special-page .special-hero h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.special-page .special-hero p {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 2;
+}
+.special-page .topics-intro {
+  padding: 70px 8% 30px;
+  text-align: center;
+}
+.special-page .topics-intro .label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.special-page .topics-intro h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.5;
+}
+.special-page .topics-intro p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  line-height: 2;
+}
+.special-page .topic {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 70px 8%;
+}
+.special-page .topic + .topic {
+  border-top: 1px solid #e3e3e3;
+}
+.special-page .topic:nth-of-type(even) .topic-visual {
+  order: 2;
+}
+.special-page .topic:nth-of-type(even) .topic-copy {
+  order: 1;
+}
+.special-page .topic-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4000 / 2667;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefed;
+  overflow: hidden;
+}
+.special-page .topic-visual::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(51,51,51,0.18);
+}
+.special-page .topic-visual .topic-number {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(5rem, 11vw, 9rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  color: #333;
+}
+.special-page .topic-visual .topic-word {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.special-page .topic-copy .topic-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+.special-page .topic-copy h3 {
+  margin: 0 0 22px;
+  font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+  line-height: 1.65;
+  font-weight: 800;
+}
+.special-page .topic-copy p {
+  margin: 0 0 14px;
+  line-height: 2.1;
+}
+.special-page .special-message {
+  padding: 80px 8%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+.special-page .special-message .label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+.special-page .special-message h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.6rem, 3vw, 2.7rem);
+  line-height: 1.6;
+}
+.special-page .special-message p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 2.1;
+}
+.special-page .special-back {
+  padding: 55px 8%;
+  text-align: center;
+}
+.special-page .special-back p {
+  margin: 0 0 20px;
+}
+.special-page .special-back a {
+  display: inline-block;
+  min-width: 220px;
+  padding: 14px 28px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: background .25s, color .25s;
+}
+.special-page .special-back a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* キャリアパスページ専用ビジュアル：図形を主役にした大胆なレイアウト */
+.special-page .topic-visual--career,
+.special-page .topic-visual--usa {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  box-sizing: border-box;
+  padding: 30px;
+  overflow: hidden;
+}
+.special-page .topic-visual--career {
+  background: #e9e9e5;
+}
+.special-page .topic-visual--career::before,
+.special-page .topic-visual--usa::before {
+  inset: 0;
+  border: 0;
+}
+.special-page .topic-visual--career::after {
+  content: "CAREER";
+  position: absolute;
+  z-index: -1;
+  right: -0.08em;
+  bottom: -0.18em;
+  color: rgba(51,51,51,.07);
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.08em;
+}
+.special-page .career-visual-heading {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0 0 28px;
+  padding: 8px 12px;
+  background: #333;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  transform: rotate(-2deg);
+}
+.special-page .career-steps {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  align-items: end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.special-page .career-steps li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 145px;
+  padding: 14px 9px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 0;
+  border-top: 7px solid #333;
+  text-align: left;
+  box-shadow: 5px 5px 0 rgba(51,51,51,.12);
+}
+.special-page .career-steps li:nth-child(1) { min-height: 112px; }
+.special-page .career-steps li:nth-child(2) { min-height: 132px; }
+.special-page .career-steps li:nth-child(3) { min-height: 152px; }
+.special-page .career-steps li:nth-child(4) { min-height: 172px; background: #d8e2e0; }
+.special-page .career-steps li:nth-child(5) { min-height: 192px; background: #333; color: #fff; border-top-color: #aebfbb; }
+.special-page .career-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  z-index: 3;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  transform: translateY(-50%) rotate(45deg);
+}
+.special-page .career-steps .step-no {
+  display: block;
+  margin-bottom: 14px;
+  color: #777;
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+.special-page .career-steps li:nth-child(5) .step-no { color: #c7d2cf; }
+.special-page .career-steps strong {
+  display: block;
+  font-size: clamp(.68rem, 1vw, .86rem);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.special-page .career-note {
+  position: relative;
+  z-index: 2;
+  margin: 18px 0 0;
+  font-size: .73rem;
+  line-height: 1.8;
+  color: #555;
+}
+.special-page .topic-visual--usa {
+  background: #dce5e3;
+}
+.special-page .topic-visual--usa::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 78%;
+  aspect-ratio: 1;
+  top: -28%;
+  right: -20%;
+  border: 28px solid rgba(51,51,51,.09);
+  border-radius: 50%;
+}
+.special-page .usa-shape {
+  position: absolute;
+  z-index: -1;
+  left: -12%;
+  bottom: -32%;
+  width: 66%;
+  aspect-ratio: 1;
+  background: #b7c9c4;
+  border-radius: 50%;
+}
+.special-page .usa-kicker {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 8px 10px;
+  background: #fff;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+  transform: rotate(-2deg);
+}
+.special-page .usa-main {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 12px 0 0 -7px;
+  font-size: clamp(5rem, 13vw, 11rem);
+  line-height: .83;
+  font-weight: 900;
+  letter-spacing: -.1em;
+  color: #333;
+}
+.special-page .usa-location {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 11px;
+  background: #333;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+.special-page .usa-caption {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 270px;
+  margin-top: 18px;
+  padding-left: 13px;
+  border-left: 4px solid #333;
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1.9;
+}
+@media (max-width: 800px) {
+  .special-page .topic-visual--career,
+  .special-page .topic-visual--usa { padding: 22px; }
+  .special-page .career-steps {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .special-page .career-steps li,
+  .special-page .career-steps li:nth-child(1),
+  .special-page .career-steps li:nth-child(2),
+  .special-page .career-steps li:nth-child(3),
+  .special-page .career-steps li:nth-child(4),
+  .special-page .career-steps li:nth-child(5) {
+    min-height: 0;
+    padding: 12px 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .special-page .career-steps .step-no { min-width: 52px; margin: 0; }
+  .special-page .career-steps li:not(:last-child)::after {
+    top: auto;
+    right: 50%;
+    bottom: -8px;
+    width: 10px;
+    height: 10px;
+    background: #e9e9e5;
+    transform: translateX(50%) rotate(135deg);
+  }
+  .special-page .career-steps strong { font-size: .9rem; }
+  .special-page .usa-main { font-size: clamp(5rem, 23vw, 8rem); }
+}
+</style>
+</head>
+
+<body class="home">
+<div id="container">
+
+<header>
+  <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="株式会社アイティーオー"></a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+    </ul>
+  </nav>
+  <img src="images/bg_text1_ito.png" alt="" class="animation-text spin">
+</header>
+
+<p id="btn-special"><a href="index.html#entry" class="border"><i class="fa-solid fa-file-pen"></i>エントリー</a></p>
+
+<main class="special-page">
+  <section class="special-hero">
+    <div class="hero-inner">
+      <span class="eyebrow">SPECIAL CONTENT</span>
+      <h2>キャリアに、<br>可能性を。</h2>
+      <p>設計者として技術を磨く。仲間を導く立場を目指す。海外で新たな経験を積む。<br>アイティーオーで描けるキャリアの可能性をご紹介します。</p>
+    </div>
+  </section>
+
+  <section class="topics-intro">
+    <span class="label">TOPICS</span>
+    <h2>自分の可能性を広げる、2つのキャリア。</h2>
+    <p>入社後のキャリアアップから、アメリカで働くという選択肢まで。アイティーオーで描けるキャリアを、2つの視点からご紹介します。</p>
+  </section>
+
+  <section class="topic">
+    <div class="topic-visual topic-visual--career">
+      <span class="career-visual-heading">CAREER PATH</span>
+      <ol class="career-steps">
+        <li><span class="step-no">STEP 01</span><strong>入社・研修</strong></li>
+        <li><span class="step-no">STEP 02</span><strong>設計実務</strong></li>
+        <li><span class="step-no">STEP 03</span><strong>後輩指導</strong></li>
+        <li><span class="step-no">STEP 04</span><strong>マネジメント</strong></li>
+        <li><span class="step-no">STEP 05</span><strong>経営に携わる</strong></li>
+      </ol>
+      <p class="career-note">※キャリアの一例です。実際の役割やキャリアの進み方は、本人の経験・適性などによって異なります。</p>
+    </div>
+    <div class="topic-copy">
+      <span class="topic-kicker">TOPICS 01 / CAREER PATH</span>
+      <h3>設計者から、<br>会社を担う存在へ。</h3>
+      <p>入社後は、研修を通じて設計の基礎を学び、実務を通じて経験を積んでいきます。日々の仕事の中で技術を磨き、担当できる業務の幅を広げていくことが、キャリアの土台になります。</p>
+      <p>経験を重ねた先には、後輩の指導やチームのマネジメントなど、人や組織を支える役割に挑戦する道もあります。さらに、会社の経営に携わる立場を目指すことも、長期的なキャリアの可能性の一つです。</p>
+      <p>設計の専門性を深めることも、仲間を育てることも、組織を動かすことも。自分が目指す姿を考えながら、キャリアを築いていくことができます。</p>
+    </div>
+  </section>
+
+  <section class="topic">
+    <div class="topic-visual topic-visual--usa">
+      <span class="usa-shape" aria-hidden="true"></span>
+      <span class="usa-kicker">YOUR CAREER, BEYOND JAPAN</span>
+      <span class="usa-main">USA</span>
+      <span class="usa-location">MICHIGAN, U.S.A.</span>
+      <span class="usa-caption">日本で培った経験を、<br>海外の仕事につなげる。</span>
+    </div>
+    <div class="topic-copy">
+      <span class="topic-kicker">TOPICS 02 / GLOBAL CAREER</span>
+      <h3>活躍の舞台は、<br>日本だけじゃない。</h3>
+      <p>アイティーオーには、アメリカで働くという選択肢もあります。ミシガン州の拠点であるDDUSAを通じて、国内とは異なる環境で仕事に取り組み、新たな経験を積むチャンスがあります。</p>
+      <p>日本で培った設計の経験を海外で活かす。異なる文化や仕事の進め方に触れながら、技術者としての視野を広げていく。海外で働くことは、自分の可能性を広げるキャリアの一つです。</p>
+      <p>海外での仕事の内容や赴任までの流れについても、会社の制度や実際の事例に沿って紹介していきます。</p>
+    </div>
+  </section>
+
+  <section class="special-message">
+    <span class="label">YOUR NEXT CHALLENGE</span>
+    <h2>自分らしいキャリアに、挑戦する。</h2>
+    <p>どんな技術者を目指すのか。どんな役割を担いたいのか。どこで力を発揮したいのか。アイティーオーでの仕事を通じて、自分の可能性を広げるキャリアを描いていきましょう。</p>
+  </section>
+
+  <section class="special-back">
+    <p>アイティーオーの仕事や働く環境について、さらに詳しくご覧ください。</p>
+    <a href="index.html">TOPページへ戻る</a>
+  </section>
+</main>
+
+<footer>
+  <div class="text">
+    <div>
+      <h4>株式会社アイティーオー</h4>
+      <p>愛知県豊明市栄町西大根30-21<br>
+      電話番号 0562-97-1100<br>
+      営業時間 8:30〜17:30<br>
+      定休日 土日</p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <ul class="icons">
+        <li><a href="https://x.com/ito3dPrinting"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/ito_recruit/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="image">
+    <p class="logo"><img src="images/ito_logo_old.png" alt="株式会社アイティーオー"></p>
+    <small>&copy; 株式会社アイティーオー</small>
+  </div>
+</footer>
+
+</div>
+
+<div id="menubar_hdr">
+  <div class="menu-icon"><span></span><span></span></div>
+</div>
+
+<div id="menubar">
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+      <li><a href="index.html#entry">新卒エントリー</a></li>
+      <li><a href="index.html#entry">中途エントリー</a></li>
+    </ul>
+  </nav>
+  <p><small>&copy; 株式会社アイティーオー</small></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

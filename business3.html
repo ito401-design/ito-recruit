@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>会社の雰囲気｜株式会社アイティーオー採用サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="記念式典や社員旅行、親睦会イベント、模型部、カートレーシングチームなど、株式会社アイティーオーの社内の雰囲気をご紹介します。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* このページ専用のスタイル。既存のcss/style.cssは変更しません。 */
+main.atmosphere-page { padding: 0; color: #333; overflow: hidden; }
+.atmosphere-page > section { padding: 0; }
+.atmosphere-page h2 { display:block; align-items:initial; margin:0; padding:0; font-weight:800; }
+.atmosphere-page .atmo-hero { position:relative; padding:clamp(55px,8vw,115px) 7% 65px; background:#f1f0ed; overflow:hidden; }
+.atmosphere-page .atmo-hero::before { content:"ITO PEOPLE"; position:absolute; left:-.04em; bottom:-.27em; font-size:clamp(6rem,20vw,19rem); line-height:1; font-weight:900; letter-spacing:-.08em; color:rgba(51,51,51,.055); white-space:nowrap; pointer-events:none; }
+.atmosphere-page .hero-top { position:relative; z-index:1; display:grid; grid-template-columns:minmax(260px,.9fr) minmax(0,1.1fr); gap:clamp(30px,5vw,80px); align-items:center; max-width:1500px; margin:0 auto; }
+.atmosphere-page .hero-copy { position:relative; z-index:2; }
+.atmosphere-page .eyebrow { display:block; margin-bottom:20px; font-size:.85rem; font-weight:800; letter-spacing:.22em; }
+.atmosphere-page .atmo-hero h2 { font-size:clamp(2.3rem,5vw,5rem); line-height:1.4; letter-spacing:.035em; margin-bottom:24px; }
+.atmosphere-page .atmo-hero p { max-width:530px; margin:0; font-size:clamp(1rem,1.35vw,1.15rem); line-height:2.05; }
+.atmosphere-page .hero-collage { position:relative; display:grid; grid-template-columns:1.15fr .85fr; grid-template-rows:clamp(120px,17vw,240px) clamp(100px,13vw,180px); gap:12px; transform:rotate(1.5deg); }
+.atmosphere-page .hero-collage .photo:first-child { grid-row:1 / 3; }
+.atmosphere-page .hero-collage .photo:nth-child(2) { transform:translateY(18px); }
+.atmosphere-page .hero-collage .photo:nth-child(3) { transform:translateX(-15px); }
+.atmosphere-page .photo { position:relative; min-width:0; min-height:0; overflow:hidden; background:#deded9; }
+.atmosphere-page .photo img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.atmosphere-page .photo:hover img { transform:scale(1.045); }
+.atmosphere-page .photo-fallback { display:none; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column; gap:9px; padding:15px; text-align:center; background:linear-gradient(135deg,#e5e4df,#c9c9c3); color:#555; font-size:.85rem; font-weight:700; letter-spacing:.08em; }
+.atmosphere-page .photo-fallback::before { content:"＋"; display:grid; place-items:center; width:40px; height:40px; border:1px solid #888; border-radius:50%; font-size:1.5rem; font-weight:400; }
+.atmosphere-page .photo img:not([src]), .atmosphere-page .photo img[src=""] { display:none; }
+.atmosphere-page .photo img.photo-missing { display:none; }
+.atmosphere-page .photo img.photo-missing + .photo-fallback { display:flex; }
+.atmosphere-page .photo-label { position:absolute; left:12px; bottom:12px; z-index:2; padding:7px 10px; background:rgba(255,255,255,.92); font-size:.7rem; font-weight:800; letter-spacing:.12em; }
+.atmosphere-page .atmo-intro { padding:80px 7% 45px; text-align:center; }
+.atmosphere-page .section-label { display:block; margin-bottom:12px; font-size:.8rem; font-weight:800; letter-spacing:.22em; }
+.atmosphere-page .atmo-intro h2 { font-size:clamp(1.8rem,3.4vw,3.1rem); line-height:1.5; }
+.atmosphere-page .atmo-intro p { max-width:730px; margin:20px auto 0; line-height:2; }
+.atmosphere-page .gallery-section { padding:clamp(45px,7vw,95px) 7%; border-top:1px solid #e2e2de; }
+.atmosphere-page .gallery-inner { max-width:1500px; margin:0 auto; }
+.atmosphere-page .gallery-heading { display:flex; justify-content:space-between; align-items:flex-end; gap:25px; margin-bottom:32px; }
+.atmosphere-page .gallery-heading .heading-main { max-width:780px; }
+.atmosphere-page .gallery-heading .number { display:block; margin-bottom:10px; color:#777; font-size:.8rem; font-weight:800; letter-spacing:.2em; }
+.atmosphere-page .gallery-heading h2 { font-size:clamp(1.7rem,3.5vw,3rem); line-height:1.45; }
+.atmosphere-page .gallery-heading p { max-width:390px; margin:0; line-height:1.9; font-size:.95rem; }
+.atmosphere-page .gallery-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-auto-rows:clamp(95px,10vw,150px); gap:12px; }
+.atmosphere-page .gallery-grid .photo { min-height:0; }
+.atmosphere-page .gallery-grid .photo:nth-child(1) { grid-column:span 6; grid-row:span 2; }
+.atmosphere-page .gallery-grid .photo:nth-child(2) { grid-column:span 3; grid-row:span 2; }
+.atmosphere-page .gallery-grid .photo:nth-child(3) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(4) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(5) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(6) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(7) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(8) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(9) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(10) { grid-column:span 6; grid-row:span 2; }
+.atmosphere-page .gallery-grid .photo:nth-child(11) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(12) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(13) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(14) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(15) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(16) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(17) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(18) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(19) { grid-column:span 6; grid-row:span 2; }
+.atmosphere-page .gallery-grid .photo:nth-child(20) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(21) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(22) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(23) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(24) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(25) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(26) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(27) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(28) { grid-column:span 6; grid-row:span 2; }
+.atmosphere-page .gallery-grid .photo:nth-child(29) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(30) { grid-column:span 3; }
+.atmosphere-page .gallery-grid .photo:nth-child(31) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(32) { grid-column:span 6; }
+.atmosphere-page .gallery-grid .photo:nth-child(n+33) { grid-column:span 4; }
+.atmosphere-page .gallery-grid .photo:nth-child(3n) { transform:translateY(8px); }
+.atmosphere-page .gallery-grid .photo:nth-child(4n) { transform:translateY(-5px); }
+.atmosphere-page .gallery-grid .photo:nth-child(3n):hover,
+.atmosphere-page .gallery-grid .photo:nth-child(4n):hover { transform:translateY(0); }
+.atmosphere-page .club-band { display:grid; grid-template-columns:1fr 1fr; min-height:300px; background:#333; color:#fff; }
+.atmosphere-page .club-band .club-copy { display:flex; flex-direction:column; justify-content:center; padding:clamp(35px,6vw,80px); }
+.atmosphere-page .club-band .section-label { color:#c7c7c2; }
+.atmosphere-page .club-band h2 { margin-bottom:18px; font-size:clamp(1.7rem,3.5vw,3rem); line-height:1.5; }
+.atmosphere-page .club-band p { max-width:530px; margin:0; line-height:2; }
+.atmosphere-page .club-band .club-visual { position:relative; min-height:300px; }
+.atmosphere-page .club-band .club-visual .photo { position:absolute; inset:0; }
+.atmosphere-page .club-band .club-visual .photo-fallback { background:linear-gradient(135deg,#5b5b56,#282826); color:#eee; }
+.atmosphere-page .closing-message { position:relative; padding:clamp(65px,9vw,120px) 7%; text-align:center; overflow:hidden; }
+.atmosphere-page .closing-message::before { content:"TOGETHER"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:rgba(51,51,51,.045); font-size:clamp(5rem,17vw,16rem); font-weight:900; letter-spacing:-.07em; white-space:nowrap; }
+.atmosphere-page .closing-message > * { position:relative; }
+.atmosphere-page .closing-message h2 { font-size:clamp(1.8rem,4vw,3.3rem); line-height:1.5; margin-bottom:18px; }
+.atmosphere-page .closing-message p { max-width:720px; margin:0 auto; line-height:2.1; }
+.atmosphere-page .special-back { padding:45px 7% 60px; text-align:center; }
+.atmosphere-page .special-back p { margin:0 0 20px; }
+.atmosphere-page .special-back a { display:inline-block; min-width:220px; padding:14px 28px; border:1px solid #333; color:#333; text-decoration:none; letter-spacing:.08em; transition:background .25s,color .25s; }
+.atmosphere-page .special-back a:hover { background:#333; color:#fff; }
+@media (max-width:900px) {
+ .atmosphere-page .hero-top { grid-template-columns:1fr; }
+ .atmosphere-page .hero-collage { max-width:800px; width:100%; grid-template-rows:clamp(150px,35vw,280px) clamp(100px,23vw,190px); }
+ .atmosphere-page .gallery-heading { display:block; }
+ .atmosphere-page .gallery-heading p { margin-top:15px; }
+ .atmosphere-page .gallery-grid { grid-auto-rows:clamp(85px,15vw,140px); }
+ .atmosphere-page .club-band { grid-template-columns:1fr; }
+ .atmosphere-page .club-band .club-visual { min-height:clamp(220px,45vw,400px); }
+}
+@media (max-width:600px) {
+ .atmosphere-page .atmo-hero { padding:55px 6% 45px; }
+ .atmosphere-page .atmo-intro { padding:55px 6% 30px; }
+ .atmosphere-page .gallery-section { padding:45px 6%; }
+ .atmosphere-page .gallery-grid { grid-template-columns:repeat(6,minmax(0,1fr)); grid-auto-rows:100px; gap:7px; }
+ .atmosphere-page .gallery-grid .photo:nth-child(n) { grid-column:span 3; grid-row:span 1; transform:none; }
+ .atmosphere-page .gallery-grid .photo:nth-child(1),
+ .atmosphere-page .gallery-grid .photo:nth-child(5n+1) { grid-column:span 6; grid-row:span 2; }
+ .atmosphere-page .gallery-grid .photo:nth-child(2) { grid-column:span 3; grid-row:span 1; }
+ .atmosphere-page .photo-label { left:6px; bottom:6px; padding:5px 7px; font-size:.6rem; }
+ .atmosphere-page .club-band .club-copy { padding:42px 6%; }
+}
+
+/* 写真サイズ統一：すべて同じ比率・整列で見せる */
+.atmosphere-page .hero-collage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: 12px;
+  transform: none;
+}
+.atmosphere-page .hero-collage .photo,
+.atmosphere-page .hero-collage .photo:first-child,
+.atmosphere-page .hero-collage .photo:nth-child(2),
+.atmosphere-page .hero-collage .photo:nth-child(3) {
+  grid-row: auto;
+  grid-column: auto;
+  transform: none;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.atmosphere-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  align-items: start;
+  gap: 14px;
+}
+.atmosphere-page .gallery-grid .photo,
+.atmosphere-page .gallery-grid .photo:nth-child(n) {
+  grid-column: auto;
+  grid-row: auto;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  height: auto;
+  transform: none;
+}
+.atmosphere-page .gallery-grid .photo img,
+.atmosphere-page .hero-collage .photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.atmosphere-page .gallery-grid .photo:hover,
+.atmosphere-page .hero-collage .photo:hover {
+  transform: none;
+}
+.atmosphere-page .club-band {
+  align-items: center;
+}
+.atmosphere-page .club-band .club-visual {
+  min-height: 0;
+  padding: 28px;
+  box-sizing: border-box;
+}
+.atmosphere-page .club-band .club-visual .photo {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+@media (max-width: 900px) {
+  .atmosphere-page .hero-collage {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+  .atmosphere-page .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+  .atmosphere-page .gallery-grid .photo:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .atmosphere-page .hero-collage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+  .atmosphere-page .hero-collage .photo:nth-child(3) {
+    display: none;
+  }
+  .atmosphere-page .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 7px;
+  }
+  .atmosphere-page .gallery-grid .photo:nth-child(n),
+  .atmosphere-page .gallery-grid .photo:nth-child(1),
+  .atmosphere-page .gallery-grid .photo:nth-child(5n+1) {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+    transform: none;
+  }
+  .atmosphere-page .club-band .club-visual {
+    padding: 0 6% 35px;
+  }
+}
+
+</style>
+</head>
+<body class="home">
+<div id="container">
+
+<header>
+  <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="株式会社アイティーオー"></a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+    </ul>
+  </nav>
+  <img src="images/bg_text1_ito.png" alt="" class="animation-text spin">
+</header>
+
+<p id="btn-special"><a href="index.html#entry" class="border"><i class="fa-solid fa-file-pen"></i>エントリー</a></p>
+
+
+<main class="atmosphere-page">
+  <section class="atmo-hero">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <span class="eyebrow">SPECIAL CONTENT / OUR CULTURE</span>
+        <h2>仕事の顔も、<br>遊びの顔も。</h2>
+        <p>一緒に仕事をする仲間と、仕事以外の時間も楽しむ。記念式典や社員旅行、親睦会のイベント、部活動など、写真を通じてアイティーオーの日常をご紹介します。</p>
+      </div>
+      <div class="hero-collage" aria-label="アイティーオーの社内イベントの写真">
+        <div class="photo"><img src="images/atmosphere/hero-01.jpg" alt="社員イベントの様子"><span class="photo-fallback">メイン写真を配置</span><span class="photo-label">ITO PEOPLE</span></div>
+        <div class="photo"><img src="images/atmosphere/hero-02.jpg" alt="社員同士の交流"><span class="photo-fallback">交流の写真を配置</span></div>
+        <div class="photo"><img src="images/atmosphere/hero-03.jpg" alt="社内活動の様子"><span class="photo-fallback">活動写真を配置</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atmo-intro">
+    <span class="section-label">LIFE AT ITO</span>
+    <h2>仲間と過ごす時間が、<br>会社の雰囲気をつくる。</h2>
+    <p>節目を祝う行事も、みんなで出かける旅行も、好きなことに打ち込む部活動も。さまざまな場面から、アイティーオーで働く人たちの表情をお届けします。</p>
+  </section>
+
+  <section class="gallery-section" id="anniversary">
+    <div class="gallery-inner">
+      <div class="gallery-heading"><div class="heading-main"><span class="number">01 / ANNIVERSARY</span><h2>節目を、ともに祝う。</h2></div><p>会社の節目をみんなで祝う記念式典。これまでの歩みを振り返り、仲間と時間を共有する大切な機会です。</p></div>
+      <div class="gallery-grid">
+        <div class="photo"><img src="images/atmosphere/ceremony-01.jpg" alt="記念式典の全体写真"><span class="photo-fallback">記念式典・全体写真</span><span class="photo-label">CEREMONY</span></div>
+        <div class="photo"><img src="images/atmosphere/ceremony-02.jpg" alt="式典での社員の様子"><span class="photo-fallback">式典の様子</span></div>
+        <div class="photo"><img src="images/atmosphere/ceremony-03.jpg" alt="記念式典の会場"><span class="photo-fallback">会場の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/ceremony-04.jpg" alt="社員が集まる様子"><span class="photo-fallback">社員の写真</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="trip">
+    <div class="gallery-inner">
+      <div class="gallery-heading"><div class="heading-main"><span class="number">02 / COMPANY TRIP</span><h2>いつもと違う場所で、つながる。</h2></div><p>社員旅行は、普段の仕事とはひと味違う交流の時間。観光や食事を楽しみながら、部署や年次を越えて親睦を深めます。</p></div>
+      <div class="gallery-grid">
+        <div class="photo"><img src="images/atmosphere/trip-01.jpg" alt="社員旅行での集合写真"><span class="photo-fallback">社員旅行・集合写真</span><span class="photo-label">COMPANY TRIP</span></div>
+        <div class="photo"><img src="images/atmosphere/trip-02.jpg" alt="社員旅行の観光風景"><span class="photo-fallback">観光の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/trip-03.jpg" alt="社員旅行での食事"><span class="photo-fallback">食事の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/trip-04.jpg" alt="旅行先で楽しむ社員"><span class="photo-fallback">旅行先の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/trip-05.jpg" alt="社員旅行中の交流"><span class="photo-fallback">交流の写真</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="events">
+    <div class="gallery-inner">
+      <div class="gallery-heading"><div class="heading-main"><span class="number">03 / SOCIAL EVENTS</span><h2>みんなで集まる、楽しむ。</h2></div><p>親睦会を中心に、社員同士が交流できるイベントを開催。仕事中とは少し違う表情が見られるのも、イベントならではです。</p></div>
+      <div class="gallery-grid">
+        <div class="photo"><img src="images/atmosphere/event-01.jpg" alt="親睦会イベントの集合写真"><span class="photo-fallback">親睦会イベント・集合写真</span><span class="photo-label">SOCIAL EVENTS</span></div>
+        <div class="photo"><img src="images/atmosphere/event-02.jpg" alt="イベントを楽しむ社員"><span class="photo-fallback">イベントの様子</span></div>
+        <div class="photo"><img src="images/atmosphere/event-03.jpg" alt="社員同士で交流する様子"><span class="photo-fallback">交流の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/event-04.jpg" alt="親睦会の食事会"><span class="photo-fallback">食事会の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/event-05.jpg" alt="社内イベントの記念写真"><span class="photo-fallback">記念写真</span></div>
+        <div class="photo"><img src="images/atmosphere/event-06.jpg" alt="イベントでの社員の表情"><span class="photo-fallback">社員の表情</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="club-band" id="model-club">
+    <div class="club-copy">
+      <span class="section-label">04 / MODEL CLUB</span>
+      <h2>好きなことを、<br>仲間と楽しむ。</h2>
+      <p>模型部では、ものづくりが好きな仲間が集まり、趣味や興味を共有しています。仕事とはまた違う場面で、アイティーオーらしい「つくる楽しさ」に触れられます。</p>
+    </div>
+    <div class="club-visual"><div class="photo"><img src="images/atmosphere/model-01.jpg" alt="模型部の活動風景"><span class="photo-fallback">模型部の活動写真</span><span class="photo-label">MODEL CLUB</span></div></div>
+  </section>
+  <section class="gallery-section">
+    <div class="gallery-inner">
+      <div class="gallery-heading"><div class="heading-main"><span class="number">MODEL CLUB / GALLERY</span><h2>つくる時間に、夢中になる。</h2></div><p>活動中の様子や作品など、模型部の雰囲気が伝わる写真を掲載します。</p></div>
+      <div class="gallery-grid">
+        <div class="photo"><img src="images/atmosphere/model-02.jpg" alt="模型部で制作する様子"><span class="photo-fallback">制作風景</span></div>
+        <div class="photo"><img src="images/atmosphere/model-03.jpg" alt="模型部の作品"><span class="photo-fallback">作品の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/model-04.jpg" alt="模型部のメンバー"><span class="photo-fallback">メンバーの写真</span></div>
+        <div class="photo"><img src="images/atmosphere/model-05.jpg" alt="模型部の活動風景"><span class="photo-fallback">活動の写真</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="club-band" id="racing-team">
+    <div class="club-copy">
+      <span class="section-label">05 / KART RACING TEAM</span>
+      <h2>チームで挑む、<br>走る楽しさ。</h2>
+      <p>カートレーシングチームの活動も、アイティーオーの社内文化のひとつ。仲間と力を合わせ、レースに挑戦する姿を写真で紹介します。</p>
+    </div>
+    <div class="club-visual"><div class="photo"><img src="images/atmosphere/kart-01.jpg" alt="カートレーシングチームの活動風景"><span class="photo-fallback">カートチームの写真</span><span class="photo-label">KART RACING</span></div></div>
+  </section>
+  <section class="gallery-section">
+    <div class="gallery-inner">
+      <div class="gallery-heading"><div class="heading-main"><span class="number">KART RACING / GALLERY</span><h2>挑戦する時間も、仲間と。</h2></div><p>レースや練習、チームで準備する様子など、活動の熱量が伝わる写真を掲載します。</p></div>
+      <div class="gallery-grid">
+        <div class="photo"><img src="images/atmosphere/kart-02.jpg" alt="カートレースの走行シーン"><span class="photo-fallback">走行シーン</span></div>
+        <div class="photo"><img src="images/atmosphere/kart-03.jpg" alt="カートレーシングチームの集合写真"><span class="photo-fallback">チーム集合写真</span></div>
+        <div class="photo"><img src="images/atmosphere/kart-04.jpg" alt="レース前の準備風景"><span class="photo-fallback">レース前の準備</span></div>
+        <div class="photo"><img src="images/atmosphere/kart-05.jpg" alt="カートレーシングチームの活動風景"><span class="photo-fallback">チーム活動の写真</span></div>
+        <div class="photo"><img src="images/atmosphere/kart-06.jpg" alt="レース後のメンバー"><span class="photo-fallback">レース後の写真</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing-message">
+    <span class="section-label">OUR CULTURE</span>
+    <h2>一緒に働く。<br>一緒に楽しむ。</h2>
+    <p>仕事に真剣に向き合うことも、仲間との時間を楽しむことも。人と人とのつながりを大切にしながら、アイティーオーの日々は続いています。</p>
+  </section>
+  <section class="special-back">
+    <p>アイティーオーの仕事や働く環境について、さらに詳しくご覧ください。</p>
+    <a href="index.html">TOPページへ戻る</a>
+  </section>
+</main>
+<footer>
+  <div class="text">
+    <div>
+      <h4>株式会社アイティーオー</h4>
+      <p>愛知県豊明市栄町西大根30-21<br>
+      電話番号 0562-97-1100<br>
+      営業時間 8:30〜17:30<br>
+      定休日 土日</p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <ul class="icons">
+        <li><a href="https://x.com/ito3dPrinting"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/ito_recruit/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="image">
+    <p class="logo"><img src="images/ito_logo_old.png" alt="株式会社アイティーオー"></p>
+    <small>&copy; 株式会社アイティーオー</small>
+  </div>
+</footer>
+
+</div>
+
+<div id="menubar_hdr">
+  <div class="menu-icon"><span></span><span></span></div>
+</div>
+
+<div id="menubar">
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+      <li><a href="index.html#entry">新卒エントリー</a></li>
+      <li><a href="index.html#entry">中途エントリー</a></li>
+    </ul>
+  </nav>
+  <p><small>&copy; 株式会社アイティーオー</small></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.atmosphere-page .photo img').forEach(function(img) {
+  img.addEventListener('error', function() { img.classList.add('photo-missing'); });
+  if (img.complete && img.naturalWidth === 0) img.classList.add('photo-missing');
+});
+</script>
+</body>
+</html>

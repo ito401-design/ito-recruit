@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SPECIAL｜株式会社アイティーオー採用サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="設計から、ものづくりを支える。株式会社アイティーオーの仕事や設計者として働く魅力をご紹介します。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* SPECIALページ専用スタイル。既存のstyle.cssは変更しません。 */
+/* 既存CSSのsection共通余白・main見出し設定が重複しないよう、このページ内だけリセット */
+main.special-page {
+  padding: 0;
+}
+.special-page > section {
+  padding: 0;
+}
+.special-page h2 {
+  display: block;
+  align-items: initial;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+.special-page {
+  color: #333;
+  overflow: hidden;
+}
+.special-page .special-hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  background: #f2f2f0;
+  overflow: hidden;
+}
+.special-page .special-hero::after {
+  content: "SPECIAL";
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.28em;
+  font-size: clamp(6rem, 19vw, 19rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: rgba(51, 51, 51, 0.055);
+  pointer-events: none;
+}
+.special-page .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+.special-page .eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+.special-page .special-hero h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.special-page .special-hero p {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 2;
+}
+.special-page .topics-intro {
+  padding: 70px 8% 30px;
+  text-align: center;
+}
+.special-page .topics-intro .label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.special-page .topics-intro h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.5;
+}
+.special-page .topics-intro p {
+  max-width: 720px;
+  margin: 22px auto 0;
+  line-height: 2;
+}
+.special-page .topic {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 70px 8%;
+}
+.special-page .topic + .topic {
+  border-top: 1px solid #e3e3e3;
+}
+.special-page .topic:nth-of-type(even) .topic-visual {
+  order: 2;
+}
+.special-page .topic:nth-of-type(even) .topic-copy {
+  order: 1;
+}
+.special-page .topic-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4000 / 2667;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefed;
+  overflow: hidden;
+}
+.special-page .topic-visual::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(51,51,51,0.18);
+}
+.special-page .topic-visual .topic-number {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(5rem, 11vw, 9rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  color: #333;
+}
+.special-page .topic-visual .topic-word {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.special-page .topic-copy .topic-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+.special-page .topic-copy h3 {
+  margin: 0 0 22px;
+  font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+  line-height: 1.65;
+  font-weight: 800;
+}
+.special-page .topic-copy p {
+  margin: 0 0 14px;
+  line-height: 2.1;
+}
+.special-page .special-message {
+  padding: 80px 8%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+.special-page .special-message .label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+.special-page .special-message h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.6rem, 3vw, 2.7rem);
+  line-height: 1.6;
+}
+.special-page .special-message p {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 2.1;
+}
+.special-page .special-back {
+  padding: 55px 8%;
+  text-align: center;
+}
+.special-page .special-back p {
+  margin: 0 0 20px;
+}
+.special-page .special-back a {
+  display: inline-block;
+  min-width: 220px;
+  padding: 14px 28px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: background .25s, color .25s;
+}
+.special-page .special-back a:hover {
+  background: #333;
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .special-page .special-hero {
+    min-height: 350px;
+    padding: 75px 7%;
+  }
+  .special-page .topics-intro {
+    padding: 55px 7% 20px;
+  }
+  .special-page .topic {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 7%;
+  }
+  .special-page .topic:nth-of-type(even) .topic-visual,
+  .special-page .topic:nth-of-type(even) .topic-copy {
+    order: initial;
+  }
+  .special-page .topic-visual {
+    width: 100%;
+    aspect-ratio: 4000 / 2667;
+    min-height: 0;
+  }
+  .special-page .special-message {
+    padding: 60px 7%;
+  }
+}
+</style>
+</head>
+
+<body class="home">
+<div id="container">
+
+<header>
+  <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="株式会社アイティーオー"></a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+    </ul>
+  </nav>
+  <img src="images/bg_text1_ito.png" alt="" class="animation-text spin">
+</header>
+
+<p id="btn-special"><a href="index.html#entry" class="border"><i class="fa-solid fa-file-pen"></i>エントリー</a></p>
+
+<main class="special-page">
+  <section class="special-hero">
+    <div class="hero-inner">
+      <span class="eyebrow">SPECIAL CONTENT</span>
+      <h2>設計から、<br>ものづくりを支える。</h2>
+      <p>自動車部品の設計を通じて、ものづくりに携わる仕事。<br>アイティーオーで働く設計者の仕事と、その魅力をご紹介します。</p>
+    </div>
+  </section>
+
+  <section class="topics-intro">
+    <span class="label">TOPICS</span>
+    <h2>アイティーオーを知る、3つのトピックス。</h2>
+    <p>自動車開発を取り巻く環境から、設計者として働く現場、そして私たちが大切にしている専門性まで。アイティーオーの仕事を3つの視点からご紹介します。</p>
+  </section>
+
+  <section class="topic">
+    <div class="topic-visual">
+      <span class="topic-number">01</span>
+      <span class="topic-word">DESIGN × TECHNOLOGY</span>
+    </div>
+    <div class="topic-copy">
+      <span class="topic-kicker">TOPICS 01</span>
+      <h3>加速する自動車開発。<br>高まる設計者の重要性。</h3>
+      <p>AIをはじめとする技術の進歩により、自動車開発のスピードはますます速まっています。多様化するニーズや高度化する技術に応えながら、限られた時間の中で高い品質を実現することが求められています。</p>
+      <p>アイデアを具体的な形へと落とし込み、ものづくりを前へ進める設計者の役割は、これからも欠かせません。開発環境が変化する今、設計者の重要性はますます高まっています。</p>
+    </div>
+  </section>
+
+  <section class="topic">
+    <div class="topic-visual">
+      <span class="topic-number">02</span>
+      <span class="topic-word">AT THE DEVELOPMENT SITE</span>
+    </div>
+    <div class="topic-copy">
+      <span class="topic-kicker">TOPICS 02</span>
+      <h3>開発の最前線で、<br>ものづくりを支える。</h3>
+      <p>自動車開発は、多くの技術者が協力し合いながら進める仕事です。アイティーオーの設計者は、自動車メーカーや部品メーカーの開発現場で、お客様やさまざまな技術者と連携しながら設計に取り組みます。</p>
+      <p>現場の一員として開発工程に関わり、周囲と協力して一つのものをつくり上げていく。お客様に近い場所で経験を積み、ものづくりを支える実感を得られる働き方です。</p>
+    </div>
+  </section>
+
+  <section class="topic">
+    <div class="topic-visual">
+      <span class="topic-number">03</span>
+      <span class="topic-word">AUTOMOTIVE PLASTIC PARTS</span>
+    </div>
+    <div class="topic-copy">
+      <span class="topic-kicker">TOPICS 03</span>
+      <h3>設計者のための会社、<br>アイティーオー。</h3>
+      <p>アイティーオーは、自動車の内装・外装に使われる樹脂部品の設計を専門としてきました。40年以上にわたり培ってきた経験と技術を活かし、自動車開発を設計の立場から支えています。</p>
+      <p>インパネやバンパーなどの部品は、車の印象を左右する大切な要素です。設計者として技術を磨きながら、自分が関わった設計が実際の部品となり、自動車の一部になっていく。その手応えを感じられることが、私たちの仕事の魅力です。</p>
+    </div>
+  </section>
+
+  <section class="special-message">
+    <span class="label">OUR WORK</span>
+    <h2>設計の力で、ものづくりを支える。</h2>
+    <p>自動車開発の現場で求められる技術に向き合い、一つひとつの設計に取り組む。アイティーオーは、設計者が専門性を活かし、挑戦を重ねていける環境を大切にしています。</p>
+  </section>
+
+  <section class="special-back">
+    <p>アイティーオーの仕事や働く環境について、さらに詳しくご覧ください。</p>
+    <a href="index.html">TOPページへ戻る</a>
+  </section>
+</main>
+
+<footer>
+  <div class="text">
+    <div>
+      <h4>株式会社アイティーオー</h4>
+      <p>愛知県豊明市栄町西大根30-21<br>
+      電話番号 0562-97-1100<br>
+      営業時間 8:30〜17:30<br>
+      定休日 土日</p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <ul class="icons">
+        <li><a href="https://x.com/ito3dPrinting"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/ito_recruit/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="image">
+    <p class="logo"><img src="images/ito_logo_old.png" alt="株式会社アイティーオー"></p>
+    <small>&copy; 株式会社アイティーオー</small>
+  </div>
+</footer>
+
+</div>
+
+<div id="menubar_hdr">
+  <div class="menu-icon"><span></span><span></span></div>
+</div>
+
+<div id="menubar">
+  <nav>
+    <ul>
+      <li><a href="index.html#kodawari">メッセージ</a></li>
+      <li><a href="index.html#brand">アイティーオーについて</a>
+        <ul>
+          <li><a href="about.html#number">数字で見るito</a></li>
+          <li><a href="about.html#training">研修体制</a></li>
+          <li><a href="https://www.ito-corp.jp/service/haken">事業内容</a></li>
+          <li><a href="https://www.ito-corp.jp/profile/corporate">会社概要</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#business">アイティーオーの仕事</a></li>
+      <li><a href="index.html#koe">社員インタビュー</a></li>
+      <li><a href="index.html#faq">募集要項</a></li>
+      <li><a href="index.html#entry">新卒エントリー</a></li>
+      <li><a href="index.html#entry">中途エントリー</a></li>
+    </ul>
+  </nav>
+  <p><small>&copy; 株式会社アイティーオー</small></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
