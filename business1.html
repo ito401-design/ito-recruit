@@ -95,11 +95,10 @@ main.special-page {
 }
 .special-page .topic {
   display: grid;
-  grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 480px) minmax(0, 1fr);
   gap: clamp(28px, 5vw, 76px);
   align-items: center;
   width: 100%;
-  max-width: none;
   box-sizing: border-box;
   margin: 0;
   padding: 70px 8%;
@@ -107,17 +106,14 @@ main.special-page {
 .special-page .topic + .topic {
   border-top: 1px solid #e3e3e3;
 }
-.special-page .topic:nth-of-type(even) .topic-visual {
-  order: 2;
-}
-.special-page .topic:nth-of-type(even) .topic-copy {
-  order: 1;
-}
 .special-page .topic-visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 4000 / 2667;
+  max-width: 480px;
+  aspect-ratio: 3 / 2;
+  height: auto;
   min-height: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,29 +206,15 @@ main.special-page {
   color: #fff;
 }
 @media (max-width: 800px) {
-  .special-page .special-hero {
-    min-height: 350px;
-    padding: 75px 7%;
-  }
-  .special-page .topics-intro {
-    padding: 55px 7% 20px;
-  }
   .special-page .topic {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 48px 7%;
+    grid-template-columns: minmax(0, 1fr);
   }
-  .special-page .topic:nth-of-type(even) .topic-visual,
-  .special-page .topic:nth-of-type(even) .topic-copy {
-    order: initial;
-  }
+
   .special-page .topic-visual {
     width: 100%;
-    aspect-ratio: 4000 / 2667;
-    min-height: 0;
-  }
-  .special-page .special-message {
-    padding: 60px 7%;
+    max-width: 480px;
+    aspect-ratio: 3 / 2;
+    height: auto;
   }
 }
 </style>
