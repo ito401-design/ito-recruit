@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* ================================================================
+   以下、Builder で選択したパーツのCSS（自動連結）
+   ================================================================ */
+
+/* ---- ステップ案内（ui-tools-step3） (ui-tools-step3) ---- */
+/*施術の流れ・ステップ（番号付き工程案内）
+---------------------------------------------------------------------------*/
+.ui-tools-step3-parts * {margin: 0;padding: 0;}
+
+/*ボックス全体*/
+.ui-tools-step3-parts {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	font-size: 0.9rem;	/*文字サイズ90%*/
+	counter-reset: step-counter;	/*CSSカウンターをリセット。番号の自動採番に使用。*/
+}
+
+/*ステップ１個あたり*/
+.ui-tools-step3-parts .step-parts {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;	/*番号とテキストの余白。1.5文字分。*/
+	padding: 1.5rem 0;	/*上下に1.5文字分の余白、左右はゼロ。*/
+	border-bottom: 1px solid var(--bg-border-color);	/*区切り線。色はtheme.cssのbg-border-colorを読み込みます。*/
+	counter-increment: step-counter;	/*CSSカウンターを1ずつ増やす*/
+}
+.ui-tools-step3-parts .step-parts:last-child {
+	border-bottom: none;	/*最後のステップは区切り線なし*/
+}
+
+/*bg1-light-parts上の区切り線色*/
+.bg1-light-parts .ui-tools-step3-parts .step-parts {
+	border-bottom-color: var(--light-border-color);
+}
+
+/*bg-parts上の区切り線色（暗い背景向け）*/
+.bg1-parts .ui-tools-step3-parts .step-parts,
+.bg1-primary-parts .ui-tools-step3-parts .step-parts,
+.bg1-accent-parts .ui-tools-step3-parts .step-parts {
+	border-bottom-color: rgba(255,255,255,0.2);	/*白の半透明*/
+}
+
+/*番号（丸い円の中にCSSカウンターで自動採番）*/
+.ui-tools-step3-parts .step-parts .num-parts {
+	flex-shrink: 0;		/*番号が縮まないようにする*/
+	width: 50px;	/*円の幅*/
+	height: 50px;	/*円の高さ*/
+	border-radius: 50%;	/*円形にする*/
+	background: var(--primary-color);	/*背景色。theme.cssのprimary-colorを読み込みます。*/
+	color: var(--primary-inverse-color);	/*文字色。theme.cssのprimary-inverse-colorを読み込みます。*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--accent-font), var(--base-font);	/*theme.cssのaccent-fontに指定したフォントを読み込む。読み込めなければbase-fontで指定したフォントを読み込む。*/
+	font-size: 1.3rem;	/*文字サイズ1.3倍*/
+	font-weight: bold;	/*太字*/
+}
+
+/*番号の中身をCSSカウンターで自動表示*/
+.ui-tools-step3-parts .step-parts .num-parts::before {
+	content: counter(step-counter);
+}
+
+/*bg-parts上の番号色調整（暗い背景向け）*/
+.bg1-parts .ui-tools-step3-parts .step-parts .num-parts,
+.bg1-primary-parts .ui-tools-step3-parts .step-parts .num-parts,
+.bg1-accent-parts .ui-tools-step3-parts .step-parts .num-parts {
+	background: rgba(255,255,255,0.2);	/*白の半透明*/
+	color: #fff;
+}
+
+/*テキストエリア（番号の横）*/
+.ui-tools-step3-parts .step-parts .text-parts {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;	/*テキスト要素同士の余白。0.3文字分。*/
+	padding-top: 0.2rem;	/*番号の中心に合わせる微調整。0.2文字分。*/
+}
+
+/*ステップ名（h4）*/
+.ui-tools-step3-parts .step-parts h4 {
+	font-size: 1.05rem;	/*文字サイズ1.05倍*/
+	line-height: 1.5;	/*行間*/
+}
+
+/*説明テキスト*/
+.ui-tools-step3-parts .step-parts p {
+	font-size: 0.85rem;	/*文字サイズ85%*/
+	line-height: 1.8;	/*行間*/
+	opacity: 0.8;	/*透明度。色が80%出た状態。*/
+}
+
+/*ステップ画像（任意。画像なしでもOK）*/
+.ui-tools-step3-parts .step-parts .img-parts {
+	width: 120px;	/*画像の幅*/
+	flex-shrink: 0;	/*画像が縮まないようにする*/
+	border-radius: 8px;	/*角を丸くする*/
+	overflow: hidden;
+}
+.ui-tools-step3-parts .step-parts .img-parts img {
+	width: 100%;
+	aspect-ratio: 1 / 1;	/*正方形*/
+	object-fit: cover;	/*コンテナいっぱいにカバー、余分な部分はカット*/
+	display: block;
+}
+
+	/*画面幅600px以下の追加指定*/
+	@media (max-width:600px) {
+
+	/*ステップ画像を非表示*/
+	.ui-tools-step3-parts .step-parts .img-parts {
+		display: none;
+	}
+
+	/*番号を小さくする*/
+	.ui-tools-step3-parts .step-parts .num-parts {
+		width: 40px;	/*円の幅を小さく*/
+		height: 40px;	/*円の高さを小さく*/
+		font-size: 1.1rem;	/*文字サイズ1.1倍*/
+	}
+
+	}/*追加指定ここまで*/

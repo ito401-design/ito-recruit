@@ -13,6 +13,8 @@
 
 /*テンプレート専用cssファイルの読み込み
 ---------------------------------------------------------------------------*/
+@import url("theme.css");
+@import url("parts.css");
 @import url("slide.css");
 @import url("inview.css");
 
