@@ -168,10 +168,10 @@
     font-size: 1rem;
 }
 
-/* スマホ表示 */
-@media (max-width: 500px) {
+/* スマホ・タブレット表示 */
+@media screen and (max-width: 768px) {
     .list-counter1-parts {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .list-counter1-parts .list-parts .num-parts {
