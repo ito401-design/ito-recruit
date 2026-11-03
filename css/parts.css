@@ -131,15 +131,14 @@
 
 /*ボックス全体*/
 .list-counter1-parts {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     text-align: center;
 }
 
 /*ボックス１個あたり*/
 .list-counter1-parts .list-parts {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,6 +170,10 @@
 
 /* スマホ表示 */
 @media (max-width: 500px) {
+    .list-counter1-parts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .list-counter1-parts .list-parts .num-parts {
         font-size: 2.8rem;
     }
