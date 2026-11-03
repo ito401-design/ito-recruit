@@ -123,4 +123,55 @@
 		font-size: 1.1rem;	/*文字サイズ1.1倍*/
 	}
 
-	}/*追加指定ここまで*/
+}/*追加指定ここまで*/
+
+/*数字カウンター（実績・Stats）
+---------------------------------------------------------------------------*/
+.list-counter1-parts * {margin: 0;padding: 0;}
+
+/*ボックス全体*/
+.list-counter1-parts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+}
+
+/*ボックス１個あたり*/
+.list-counter1-parts .list-parts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1.5rem 0.5rem;
+}
+
+/*以下、画面幅500px以下の設定・アイコン・数字・単位・説明テキスト・背景色の設定もすべてコピー*/
+
+/* アイコン */
+.list-counter1-parts .list-parts i {
+    font-size: 2.5rem;
+}
+
+/* 数字 */
+.list-counter1-parts .list-parts .num-parts {
+    font-size: 4rem;
+}
+
+/* 単位（社・％・名・年） */
+.list-counter1-parts .list-parts .num-parts .unit-parts {
+    font-size: 1.2rem;
+}
+
+/* 説明文 */
+.list-counter1-parts .list-parts p:last-child {
+    font-size: 1rem;
+}
+
+/* スマホ表示 */
+@media (max-width: 500px) {
+    .list-counter1-parts .list-parts .num-parts {
+        font-size: 2.8rem;
+    }
+}
