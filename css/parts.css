@@ -168,16 +168,13 @@
     font-size: 1rem;
 }
 
-/* 数字で見るito：スマホ表示を2列にする */
-@media screen and (max-width: 768px) {
-    #number .list-counter1-parts {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+/* スマホ表示 */
+@media (max-width: 500px) {
+    .list-counter1-parts {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    #number .list-counter1-parts .list-parts {
-        flex: none !important;
-        width: auto !important;
-        min-width: 0;
+    .list-counter1-parts .list-parts .num-parts {
+        font-size: 2.8rem;
     }
 }
