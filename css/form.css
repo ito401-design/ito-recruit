@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+
+/*フォーム全体
+---------------------------------------------------------------------------*/
+.contact-form-block {
+	width: 100%;
+}
+
+
+/*送信完了・エラーメッセージ
+---------------------------------------------------------------------------*/
+/*送信完了*/
+.form-success-box {
+	padding: 1.5rem;
+	background: var(--primary-light-color);		/*背景色。theme.cssのprimary-light-colorを読み込みます。*/
+	color: var(--primary-light-inverse-color);	/*文字色。theme.cssのprimary-light-inverse-colorを読み込みます。*/
+	text-align: center;
+}
+.form-success-box > :first-child {margin-top: 0;}
+.form-success-box > :last-child {margin-bottom: 0;}
+
+/*エラー*/
+.form-global-error {
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	border: 1px solid #f0c2c2;	/*枠線の幅、線種、色*/
+	background: #fff4f4;		/*背景色*/
+	color: #9b2e2e;				/*文字色*/
+}
+
+/*hidden属性が付いたものは非表示（念の為）*/
+.form-success-box[hidden],
+.form-global-error[hidden],
+.js-ajax-form[hidden],
+.form-row[hidden] {
+	display: none !important;
+}
+
+
+/*入力欄１行分
+---------------------------------------------------------------------------*/
+.form-row + .form-row {
+	margin-top: 1.2rem;	/*入力欄同士の間のスペース*/
+}
+
+/*項目名*/
+.form-label {
+	display: block;
+	margin-bottom: 0.4rem;
+	font-size: 0.85rem;	/*文字サイズ85%*/
+	font-weight: 700;	/*太字*/
+	line-height: 1.5;
+}
+
+/*「必須」と「任意」の文字*/
+.required-badge,
+.optional-badge {
+	display: inline-block;
+	margin-left: 0.8em;
+	padding: 0.2rem 0.5rem;
+	font-size: 0.9em;
+	font-weight: 700;
+	color: #fff;
+	background: #d94c4c;
+	border-radius: 100px;	/*角を丸くする*/
+}
+
+/*「任意」の文字だけ薄くする*/
+.optional-badge {
+	opacity: 0.6;	/*色を60%出す*/
+}
+
+
+/*２項目を横並びにする場合（お名前と電話番号など）
+---------------------------------------------------------------------------*/
+.form-row-group {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));	/*2列*/
+	gap: 1.2rem 1.5rem;	/*上下、左右のスペース*/
+}
+
+/*前後の入力欄とのスペース*/
+.form-row + .form-row-group,
+.form-row-group + .form-row,
+.form-row-group + .form-row-group {
+	margin-top: 1.2rem;
+}
+.form-row-group > .form-row {
+	margin-top: 0;
+}
+
+	/*画面幅500px以下の追加指定*/
+	@media (max-width:500px) {
+
+	/*1列にする*/
+	.form-row-group {
+		grid-template-columns: 1fr;
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*入力欄
+---------------------------------------------------------------------------*/
+.contact-form-inner input[type="text"],
+.contact-form-inner input[type="email"],
+.contact-form-inner input[type="tel"],
+.contact-form-inner input[type="file"],
+.contact-form-inner select,
+.contact-form-inner textarea {
+	width: 100%;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #d9dee4;	/*枠線の幅、線種、色*/
+	border-radius: 20px;		/*角を丸くする*/
+	padding: 0.8rem 1rem;		/*上下に0.8文字分、左右に1文字分の余白*/
+	background: #f8f9fb;		/*背景色*/
+	color: #333;				/*文字色*/
+	font-family: inherit;
+	font-size: 16px;			/*スマホで入力時に画面が拡大されないよう16pxにしています*/
+	line-height: 1.6;
+	transition: border-color 0.2s, background-color 0.2s;
+	box-sizing: border-box;
+}
+
+/*プレースホルダーの文字色*/
+.contact-form-inner ::placeholder {
+	color: #aab2bb;
+}
+
+/*入力中*/
+.contact-form-inner input[type="text"]:focus,
+.contact-form-inner input[type="email"]:focus,
+.contact-form-inner input[type="tel"]:focus,
+.contact-form-inner input[type="file"]:focus,
+.contact-form-inner select:focus,
+.contact-form-inner textarea:focus {
+	outline: none;
+	border-color: var(--primary-color);	/*枠線の色。theme.cssのprimary-colorを読み込みます。*/
+	background: #fff;					/*背景色*/
+}
+
+/*テキストエリア（複数行の入力欄）*/
+.contact-form-inner textarea {
+	resize: vertical;	/*高さのみ変更可能*/
+	min-height: 12em;	/*最低の高さ*/
+}
+
+/*添付ファイル*/
+.contact-form-inner input[type="file"] {
+	padding: 0.7rem 1rem;
+	cursor: pointer;
+}
+.contact-form-inner input[type="file"]::file-selector-button {
+	margin-right: 0.9rem;
+	border: none;
+	border-radius: 100px;	/*角を丸くする*/
+	padding: 0.4rem 1rem;
+	background: var(--primary-color);		/*背景色。theme.cssのprimary-colorを読み込みます。*/
+	color: var(--primary-inverse-color);	/*文字色。theme.cssのprimary-inverse-colorを読み込みます。*/
+	font: inherit;
+	font-size: 0.85rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/*プルダウン（右端の矢印）*/
+.contact-form-inner select {
+	padding-right: 2.6rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.9rem center;
+	background-size: 0.8rem auto;
+	cursor: pointer;
+}
+
+/*プルダウンを横に並べる場合（日付など）*/
+.select-inline-group {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 0.75rem;
+}
+.select-inline {
+	width: 100%;
+}
+
+/*郵便番号・都道府県はPCで少し短くする*/
+@media (min-width: 768px) {
+	.h-adr input[name="postal_code"],
+	.h-adr input[name="address_pref"] {
+		width: min(100%, 10rem);
+	}
+}
+
+/*補足テキスト*/
+.form-help-text,
+.form-file-reset-text {
+	margin: 0.4rem 0 0;
+	font-size: 0.8rem;
+	line-height: 1.6;
+	opacity: 0.8;
+}
+
+
+/*チェックボックス・ラジオボタン
+---------------------------------------------------------------------------*/
+.check-group,
+.radio-group {
+	display: grid;
+	gap: 0.5rem;
+}
+.check-item,
+.radio-item,
+.check-single {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+	line-height: 1.6;
+	cursor: pointer;
+}
+.check-item input,
+.radio-item input,
+.check-single input {
+	margin: 0.3rem 0 0;
+	flex-shrink: 0;
+	accent-color: var(--primary-color);	/*チェック時の色。theme.cssのprimary-colorを読み込みます。対応ブラウザのみ。*/
+}
+
+/*個人情報同意チェック（中央寄せ）*/
+.form-row.js-privacy-row .check-single {
+	width: fit-content;
+	margin: 0 auto;
+	align-items: center;
+	font-size: 0.8rem;	/*文字サイズ80%*/
+}
+.form-row.js-privacy-row .check-single input {
+	margin-top: 0;
+}
+
+
+/*入力エラー
+---------------------------------------------------------------------------*/
+.form-row.is-error input[type="text"],
+.form-row.is-error input[type="email"],
+.form-row.is-error input[type="tel"],
+.form-row.is-error input[type="file"],
+.form-row.is-error select,
+.form-row.is-error textarea {
+	border-color: #d94c4c;	/*枠線の色*/
+	background: #fff8f8;	/*背景色*/
+}
+.form-row.is-error .form-label,
+.form-row.is-error .check-single,
+.form-row.is-error .check-item,
+.form-row.is-error .radio-item {
+	color: #972f2f;	/*文字色*/
+}
+.form-error-text {
+	margin: 0.4rem 0 0;
+	font-size: 0.8rem;
+	line-height: 1.6;
+	color: #b23838;	/*文字色*/
+}
+
+
+/*送信ボタン
+---------------------------------------------------------------------------*/
+.form-actions {
+	margin-top: 1.2rem;
+	text-align: center;
+}
+
+/*ボタン本体*/
+.submit-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;	/*文字と矢印の間のスペース*/
+	width: 100%;
+	min-height: 56px;	/*最低の高さ*/
+	border: none;
+	border-radius: 100px;	/*角を丸くする*/
+	padding: 0.8rem 1.5rem;
+	background: var(--accent-color);		/*背景色。theme.cssのaccent-colorを読み込みます。*/
+	color: var(--accent-inverse-color);		/*文字色。theme.cssのaccent-inverse-colorを読み込みます。*/
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+	transition: filter 0.2s, opacity 0.2s;
+}
+
+/*右側の矢印（Font Awesomeのアイコン）*/
+.submit-button::after {
+	font-family: "Font Awesome 6 Free";
+	content: "\f105";
+	font-weight: 900;
+}
+
+/*マウスオン時*/
+.submit-button:hover {
+	filter: brightness(1.1);	/*少しだけ明るくする*/
+}
+
+/*送信中*/
+.submit-button:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+
+
+/*ハニーポット（ボット対策の隠し入力欄。変更不要）
+---------------------------------------------------------------------------*/
+.hp-field {
+	position: absolute !important;
+	left: -9999px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+}
+
